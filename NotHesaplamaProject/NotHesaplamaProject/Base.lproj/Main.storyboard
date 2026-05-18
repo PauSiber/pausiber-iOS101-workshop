@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ckm-lW-aqH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Not Hesaplayıcı-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotHesaplamaProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G0f-wj-QSN">
-                                <rect key="frame" x="16" y="122" width="361" height="37"/>
+                                <rect key="frame" x="16" y="176" width="361" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="mRC-sp-6H5"/>
                                 </constraints>
@@ -26,41 +26,50 @@
                                     <segment title="%50 - %50"/>
                                 </segments>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YBH-DG-0kY">
-                                <rect key="frame" x="16" y="289.66666666666669" width="361" height="34"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YBH-DG-0kY">
+                                <rect key="frame" x="16" y="343.66666666666669" width="361" height="34"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="vizeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ark-aW-PON"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vize Notu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjt-xO-Eh4">
-                                <rect key="frame" x="16.000000000000007" y="238" width="105.66666666666669" height="27.666666666666686"/>
+                                <rect key="frame" x="16.000000000000007" y="292" width="105.66666666666669" height="27.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-n3-oYr">
-                                <rect key="frame" x="345" y="238" width="32" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-n3-oYr">
+                                <rect key="frame" x="366" y="292" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Notu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaH-Z3-lsm">
-                                <rect key="frame" x="15.999999999999993" y="387.66666666666669" width="110.33333333333331" height="29"/>
+                                <rect key="frame" x="15.999999999999993" y="441.66666666666669" width="110.33333333333331" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG2-GG-4jc">
-                                <rect key="frame" x="345" y="389.66666666666669" width="32" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG2-GG-4jc">
+                                <rect key="frame" x="366.66666666666669" y="443.66666666666669" width="10.333333333333314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VNv-VD-PeM">
-                                <rect key="frame" x="16" y="440.66666666666669" width="361" height="34"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VNv-VD-PeM">
+                                <rect key="frame" x="16" y="494.66666666666669" width="361" height="34.000000000000057"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="finalSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jC6-DS-kqf"/>
+                                </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSm-WF-89N">
-                                <rect key="frame" x="166" y="611.66666666666663" width="63" height="28"/>
+                                <rect key="frame" x="166" y="665.66666666666663" width="63" height="28"/>
+                                <color key="onTintColor" systemColor="systemOrangeColor"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devamsızlık:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N09-vT-6xr">
-                                <rect key="frame" x="32" y="574.66666666666663" width="329" height="21"/>
+                                <rect key="frame" x="32" y="628.66666666666663" width="329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,8 +79,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ULe-xQ-Fet"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Hesapla"/>
+                                <connections>
+                                    <action selector="hesaplaButtonChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h9j-Pl-zdq"/>
+                                    <segue destination="52X-Ah-dyE" kind="show" identifier="DetailViewController" id="ZqU-o5-0zX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -104,15 +118,25 @@
                             <constraint firstItem="zSm-WF-89N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgy-rC-ZoI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Not Hesaplayıcı" largeTitleDisplayMode="always" id="YX6-zt-Bpd"/>
+                    <connections>
+                        <outlet property="devamsızlıkSwitch" destination="zSm-WF-89N" id="Hc6-lU-3KP"/>
+                        <outlet property="finalNotu" destination="MG2-GG-4jc" id="SFr-Z0-hHW"/>
+                        <outlet property="finalSlider" destination="VNv-VD-PeM" id="hg2-9y-Lzr"/>
+                        <outlet property="hesaplaButton" destination="2dI-Du-I8J" id="wyw-Mf-TaF"/>
+                        <outlet property="segmentedControl" destination="G0f-wj-QSN" id="mqI-Cp-Nsw"/>
+                        <outlet property="vizeNotu" destination="NEL-n3-oYr" id="0id-Og-fCL"/>
+                        <outlet property="vizeSlider" destination="YBH-DG-0kY" id="80P-K3-AM7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="87.323943661971839"/>
+            <point key="canvasLocation" x="947.32824427480909" y="87.323943661971839"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="bac-NM-emk">
             <objects>
-                <viewController id="52X-Ah-dyE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="52X-Ah-dyE" customClass="DetailViewController" customModule="NotHesaplamaProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOL-D6-OPD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +147,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statusLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-R8-ntr">
-                                <rect key="frame" x="32" y="490" width="329" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statusLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-R8-ntr">
+                                <rect key="frame" x="32" y="490" width="329" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -134,8 +158,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="a94-Fm-Cik"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Yeniden Hesapla"/>
+                                <connections>
+                                    <action selector="yenidenHesaplaButtonTapped:" destination="52X-Ah-dyE" eventType="touchUpInside" id="qeC-ur-WJG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ptt-OB-2sI"/>
@@ -151,15 +179,40 @@
                             <constraint firstItem="ptt-OB-2sI" firstAttribute="trailing" secondItem="Suv-A8-7Zx" secondAttribute="trailing" constant="16" id="ozh-O9-27e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zec-8N-SUv"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="uzd-R8-ntr" id="f7y-OG-EQY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZN-q5-Uba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841.9847328244274" y="86.619718309859152"/>
+            <point key="canvasLocation" x="1768.7022900763359" y="86.619718309859152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="op5-If-240">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckm-lW-aqH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GCT-Km-qzW">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I2v-jU-CJN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkp-7C-ubf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="87.323943661971839"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.55294117649999996" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
