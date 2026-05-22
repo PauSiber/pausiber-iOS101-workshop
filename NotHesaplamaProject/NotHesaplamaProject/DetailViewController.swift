@@ -18,7 +18,7 @@ final class DetailViewController: UIViewController {
         
         if gectiMi == true {
             statusLabel.text = "Geçtiniizz!!🥳 \nNotunuz: \(Int(hesaplananNot))"
-            view.backgroundColor = .green
+            view.backgroundColor = .greenBackground
         } else {
             statusLabel.text = "Seneye tekrar dene 🫠 \nNotunuz: \(Int(hesaplananNot))"
             view.backgroundColor = .redBackground
